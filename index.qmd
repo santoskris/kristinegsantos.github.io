@@ -1,0 +1,267 @@
+---
+title: ""
+format: html
+page-layout: full
+---
+
+<style>
+
+/* ===== PAGE ===== */
+
+body{
+margin:0;
+font-family:"Times New Roman", serif;
+overflow:hidden;
+}
+
+
+/* ===== DIRECTORY BAR ===== */
+
+.top-banner{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+background:#5c3a1e;
+border-bottom:3px solid #d4a84f;
+
+padding:4px 0;
+
+text-align:center;
+
+z-index:100;
+
+}
+
+
+/* ===== NAV LINKS ===== */
+
+.top-banner a{
+
+color:#ffd86b;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:15px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+margin:0 14px;
+
+line-height:22px;
+
+}
+
+
+/* ===== MAP ===== */
+
+#map{
+
+position:absolute;
+
+top:30px;
+left:0;
+
+width:100vw;
+height:calc(100vh - 30px);
+
+background-image:url("pokemonmap.jpg");
+background-size:cover;
+background-position:center;
+
+}
+
+
+/* ===== WELCOME OVERLAY ===== */
+
+.overlay{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+color:white;
+
+z-index:50;
+
+transition:opacity .8s ease;
+
+}
+
+
+.welcome{
+
+font-size:90px;
+text-shadow:0 0 30px black;
+
+}
+
+.quote{
+
+margin-top:20px;
+
+font-size:26px;
+
+background:rgba(0,0,0,.6);
+
+padding:20px 30px;
+
+border-radius:12px;
+
+}
+
+
+/* ===== SPRITES ===== */
+
+.sprite{
+
+position:absolute;
+image-rendering:pixelated;
+z-index:10;
+
+}
+
+.trainer{
+width:90px;
+}
+
+.gengar{
+width:60px;
+}
+
+.pikachu{
+width:45px;
+}
+
+.ditto{
+width:40px;
+}
+
+</style>
+
+
+<div class="top-banner">
+
+<a href="index.html">HOME</a>
+<a href="portfolio.html">PORTFOLIO</a>
+<a href="upperdivs.html">UPPER DIVS</a>
+
+</div>
+
+
+<div id="map">
+
+
+<div class="overlay" id="overlay">
+
+<div class="welcome">
+WELCOME
+</div>
+
+<div class="quote">
+
+"I want to take everything I learn, each day, and put it to use."
+<br>
+Pokémon Journeys Episode 147
+
+</div>
+
+</div>
+
+
+<img id="trainer"
+src="trainer.gif"
+class="sprite trainer"
+style="left:50%; top:60%;">
+
+
+<img src="gengar.gif"
+class="sprite gengar"
+style="left:75%; top:35%;">
+
+
+<img src="ditto.gif"
+class="sprite ditto"
+style="left:25%; top:65%;">
+
+
+<img src="pikachu.gif"
+class="sprite pikachu"
+style="left:65%; top:75%;">
+
+
+</div>
+
+
+<script>
+
+/* ===== TRAINER MOVEMENT ===== */
+
+const trainer = document.getElementById("trainer");
+const overlay = document.getElementById("overlay");
+
+let x = window.innerWidth * 0.5;
+let y = window.innerHeight * 0.6;
+
+trainer.style.left = x + "px";
+trainer.style.top = y + "px";
+
+const speed = 8;
+
+let faded = false;
+
+
+document.addEventListener("keydown", function(e){
+
+if(!faded){
+
+overlay.style.opacity="0";
+faded=true;
+
+}
+
+
+if(e.key==="ArrowRight"){
+x+=speed;
+trainer.style.transform="scaleX(1)";
+}
+
+if(e.key==="ArrowLeft"){
+x-=speed;
+trainer.style.transform="scaleX(-1)";
+}
+
+if(e.key==="ArrowUp"){
+y-=speed;
+}
+
+if(e.key==="ArrowDown"){
+y+=speed;
+}
+
+
+if(x<0) x=0;
+if(y<0) y=0;
+
+if(x>window.innerWidth-100) x=window.innerWidth-100;
+if(y>window.innerHeight-100) y=window.innerHeight-100;
+
+
+trainer.style.left=x+"px";
+trainer.style.top=y+"px";
+
+});
+
+</script>
