@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Upper Division Coursework</title>
+
+<style>
+
+body{
+margin:0;
+background:#f4e4c1;
+font-family:"Times New Roman", serif;
+}
+
+/* NAVBAR */
+
+.top-banner{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#5c3a1e;
+border-bottom:3px solid #d4a84f;
+padding:8px 0;
+text-align:center;
+z-index:9999;
+}
+
+.top-banner a{
+color:#ffd86b;
+text-decoration:none;
+font-weight:bold;
+font-size:15px;
+letter-spacing:1.5px;
+margin:0 22px;
+text-transform:uppercase;
+}
+
+/* CONTENT */
+
+.content{
+margin-top:100px;
+width:90%;
+max-width:1500px;
+margin:auto;
+color:#3a2a1a;
+}
+
+/* COURSE LAYOUT */
+
+.course{
+display:flex;
+gap:60px;
+margin-top:30px;
+align-items:flex-start;
+}
+
+.course-text{
+flex:1;
+font-size:18px;
+line-height:1.7;
+max-width:650px;
+}
+
+/* SLIDESHOW */
+
+.slideshow{
+flex:1.4;
+max-width:900px;
+height:560px;
+position:relative;
+overflow:hidden;
+border-radius:14px;
+}
+
+.slide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity .7s ease;
+}
+
+.slide.active{
+opacity:1;
+}
+
+/* ARROWS */
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:45px;
+background:rgba(0,0,0,.45);
+color:white;
+padding:10px 20px;
+cursor:pointer;
+border-radius:8px;
+}
+
+.left{left:18px;}
+.right{right:18px;}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="top-banner">
+
+<a href="index.html">HOME</a>
+<a href="portfolio.html">PORTFOLIO</a>
+<a href="upperdivs.html">UPPER DIVS</a>
+
+</div>
+
+
+
+<div class="content">
+
+<h1>Upper Division Coursework</h1>
+
+<p>
+One of the most exciting parts of studying biology is getting to see how the ideas we learn in lecture actually appear in the real world. Many of my upper division classes combine traditional lectures with hands-on experiences, field observations, and opportunities to interact directly with organisms in their natural environments.
+</p>
+
+<p>
+Courses like BIOL 101 focus on developing computational skills that allow biologists to analyze datasets, visualize patterns, and communicate results clearly.
+</p>
+
+
+<h2>BIOL 101 – Computational Biology and Data Skills</h2>
+
+<p>
+BIOL 101 focuses on developing computational and data analysis skills that are increasingly important in modern biology. In this class we used tools such as R and Quarto to organize biological datasets, create visualizations, and interpret results from scientific studies.
+</p>
+
+<p>
+Through projects in this class I learned how coding can support scientific workflows by helping researchers analyze data, generate figures, and present results clearly.
+</p>
+
+<p>
+<a href="Kristine-Santos-Unit-3-Project.html" target="_blank">
+View My BIOL 101 Website Project
+</a>
+</p>
+
+
+
+<h2>BIOL 163 – Vertebrate Natural History</h2>
+
+<div class="course">
+
+<div class="course-text">
+
+<p>
+Vertebrate Natural History explores how vertebrates behave and survive in their natural environments. In lecture we studied vertebrate morphology, evolutionary relationships, and how anatomical traits help animals adapt to different habitats.
+</p>
+
+<p>
+A highlight of the course was participating in overnight field trips to the Mojave Desert and the James Reserve in Idyllwild. During nighttime surveys we searched for vertebrates that are most active after dark.
+</p>
+
+<p>
+These field experiences allowed us to observe animals such as owls and snakes and connect the anatomy we studied in lecture with how those traits help animals survive in the wild.
+</p>
+
+</div>
+
+
+<div class="slideshow" id="bioSlides">
+
+<img src="IMG_7404.jpg" class="slide active">
+<img src="BIOL163(2).jpg" class="slide">
+<img src="BIOL163(3).jpg" class="slide">
+<img src="BIOL163(4).jpg" class="slide">
+<img src="IMG_7389.jpg" class="slide">
+
+<div class="arrow left" onclick="changeSlide('bioSlides',-1)">❮</div>
+<div class="arrow right" onclick="changeSlide('bioSlides',1)">❯</div>
+
+</div>
+
+</div>
+
+
+
+<h2>ENTM 100 – General Entomology</h2>
+
+<div class="course">
+
+<div class="course-text">
+
+<p>
+General Entomology explores the incredible diversity of insects and how scientists study them. In this course we learned about insect anatomy, classification, and evolutionary relationships.
+</p>
+
+<p>
+One of the most exciting parts of the class was building our own insect collections. Searching for insects in different habitats honestly felt a lot like catching Pokémon — except instead of Pokéballs we used nets and specimen boxes.
+</p>
+
+<p>
+Each insect was preserved, labeled with collection data, and identified using morphological traits such as wing patterns, antennae, and body segmentation.
+</p>
+
+</div>
+
+
+<div class="slideshow" id="entSlides">
+
+<img src="ENTM01.JPG" class="slide active">
+<img src="ENTM02.jpg" class="slide">
+<img src="ENTM03.jpg" class="slide">
+
+<div class="arrow left" onclick="changeSlide('entSlides',-1)">❮</div>
+<div class="arrow right" onclick="changeSlide('entSlides',1)">❯</div>
+
+</div>
+
+</div>
+
+
+
+<h2>BPSC 104 – Plant Diversity</h2>
+
+<p>
+Plant Diversity focuses on the evolutionary history and classification of plants. By studying plant morphology including reproductive structures, vascular systems, and leaf organization we learned how botanists distinguish between plant groups and trace their evolutionary history.
+</p>
+
+<p>
+Looking at plants through this perspective changes the way you see them in everyday life. Instead of simply seeing plants as part of the landscape, you begin to recognize the structures and adaptations that reveal their ecological roles and evolutionary relationships.
+</p>
+
+
+</div>
+
+
+
+<script>
+
+function changeSlide(id, step){
+
+let slideshow = document.getElementById(id)
+let slides = slideshow.querySelectorAll(".slide")
+
+let index = 0
+
+slides.forEach((slide,i)=>{
+if(slide.classList.contains("active")) index=i
+})
+
+slides[index].classList.remove("active")
+
+index += step
+
+if(index<0) index=slides.length-1
+if(index>=slides.length) index=0
+
+slides[index].classList.add("active")
+
+}
+
+</script>
+
+
+</body>
+</html>
