@@ -12,13 +12,11 @@ background:#f4e4c1;
 font-family:"Times New Roman", serif;
 }
 
-/* NAVBAR */
-
 .top-banner{
 position:fixed;
 top:0;
 left:0;
-width:100vw;
+width:100%;
 background:#5c3a1e;
 border-bottom:3px solid #d4a84f;
 padding:8px 0;
@@ -36,31 +34,27 @@ margin:0 22px;
 text-transform:uppercase;
 }
 
-/* PAGE CONTENT */
-
 .content{
-padding-top:140px;
+margin-top:100px;
 width:90%;
 max-width:1500px;
 margin:auto;
 color:#3a2a1a;
 }
 
-/* COURSE LAYOUT */
-
 .course{
 display:flex;
 gap:60px;
-margin-top:50px;
+margin-top:30px;
+align-items:flex-start;
 }
 
 .course-text{
 flex:1;
 font-size:18px;
 line-height:1.7;
+max-width:650px;
 }
-
-/* SLIDESHOW */
 
 .slideshow{
 flex:1.4;
@@ -73,6 +67,8 @@ border-radius:14px;
 
 .slide{
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
 object-fit:cover;
@@ -89,28 +85,15 @@ position:absolute;
 top:50%;
 transform:translateY(-50%);
 font-size:45px;
-background:rgba(0,0,0,.4);
+background:rgba(0,0,0,.45);
 color:white;
 padding:10px 20px;
 cursor:pointer;
+border-radius:8px;
 }
 
 .left{left:18px;}
 .right{right:18px;}
-
-.project-link{
-margin-top:15px;
-font-weight:bold;
-}
-
-.project-link a{
-color:#5c3a1e;
-text-decoration:none;
-}
-
-.project-link a:hover{
-text-decoration:underline;
-}
 
 </style>
 
@@ -124,7 +107,6 @@ text-decoration:underline;
 </div>
 
 
-
 <div class="content">
 
 # Upper Division Coursework
@@ -134,32 +116,14 @@ One of the most exciting parts of studying biology is getting to see how the ide
 Another important component of modern biology is the ability to work with data. Courses like **BIOL 101** focus on developing computational and analytical skills that allow biologists to interpret datasets, visualize biological patterns, and communicate scientific results clearly.
 
 
-
 ## BIOL 101 – Computational Biology and Data Skills
 
-<div class="course">
+BIOL 101 focuses on developing computational and data analysis skills that are increasingly important in modern biology. In this course we learned how coding can be used to analyze biological datasets, visualize patterns, and communicate scientific findings more effectively.
 
-<div class="course-text">
+Using tools such as **R and Quarto**, we practiced organizing datasets, creating figures, and interpreting results from biological studies.
 
-BIOL 101 focuses on developing computational and data analysis skills that are increasingly important in modern biology. In this course we learned how coding can be used to explore biological datasets, visualize patterns, and communicate scientific findings more effectively.
-
-Using tools such as R and Quarto, we practiced organizing datasets, creating figures, and interpreting results from biological studies. These computational approaches allow scientists to analyze complex biological questions, from ecological patterns to evolutionary relationships.
-
-Through projects in this class, I learned how coding can support scientific workflows by helping researchers organize data, generate visualizations, and present results in clear and structured formats.
-
-</div>
-
-</div>
-
-<div class="project-link">
-
-Project File 3:  
-<a href="Kristine-Santos-Unit-3-Project.html" target="_blank">
-View My BIOL 101 Website Project
-</a>
-
-</div>
-
+**Project File 3**  
+<a href="Kristine-Santos-Unit-3-Project.html" target="_blank">View My BIOL 101 Website Project</a>
 
 
 ## BIOL 163 – Vertebrate Natural History
@@ -168,14 +132,11 @@ View My BIOL 101 Website Project
 
 <div class="course-text">
 
-Vertebrate Natural History explores how vertebrates behave and survive in their natural environments. We studied morphology, evolutionary relationships, and how anatomical traits help animals adapt to their habitats.
+Vertebrate Natural History explores how vertebrates behave and survive in their natural environments.
 
-A highlight of the course was participating in overnight field trips to places like the Mojave Desert and the James Reserve in Idyllwild. During nighttime surveys we searched for vertebrates that are most active after dark.
-
-These experiences allowed us to observe animals like owls and snakes in their real environments and connect the anatomy we learned in lecture to how those features help animals survive in nature.
+A highlight of the course was participating in overnight field trips to the **Mojave Desert** and the **James Reserve in Idyllwild**, where we conducted nighttime surveys and observed animals such as **owls and snakes**.
 
 </div>
-
 
 <div class="slideshow" id="bioSlides">
 
@@ -193,21 +154,19 @@ These experiences allowed us to observe animals like owls and snakes in their re
 </div>
 
 
-
 ## ENTM 100 – General Entomology
 
 <div class="course">
 
 <div class="course-text">
 
-General Entomology explores the diversity and biology of insects. In this class we studied insect anatomy, classification, and evolutionary relationships while learning how to recognize the structures that distinguish different insect groups.
+General Entomology explores insect diversity and anatomy.
 
-One of the most exciting parts of the class was building our own insect collections. Searching for insects in different habitats honestly felt a lot like catching Pokémon except instead of Pokéballs we used nets, collection jars, and specimen boxes.
+Building our own insect collections felt a bit like **catching Pokémon**, except instead of Pokéballs we used nets and specimen boxes.
 
-Each insect we collected became part of a larger scientific collection. We carefully prepared specimens, labeled them with collection data, and identified them using morphological traits like wing patterns, body segmentation, and antenna structure.
+Each insect was preserved, labeled, and identified using morphological traits such as wings, antennae, and body segments.
 
 </div>
-
 
 <div class="slideshow" id="entSlides">
 
@@ -223,25 +182,14 @@ Each insect we collected became part of a larger scientific collection. We caref
 </div>
 
 
-
 ## BPSC 104 – Plant Diversity
 
-<div class="course">
+Plant Diversity explores how plants evolved and how botanists classify them based on morphological traits such as reproductive structures and vascular systems.
 
-<div class="course-text">
+Looking at plants through this perspective changes how you see them in everyday environments.
 
-Plant Diversity focuses on the evolutionary history and classification of plants. In this class we explored how plants evolved from early lineages into the wide variety of species that exist today.
-
-By studying plant morphology including reproductive structures, vascular systems, and leaf organization we learned how botanists distinguish between plant groups and trace their evolutionary history.
-
-Looking at plants through this perspective changes the way you see them in everyday life. Instead of simply seeing plants as part of the landscape you begin to recognize the structures and adaptations that reveal their ecological roles and evolutionary relationships.
 
 </div>
-
-</div>
-
-</div>
-
 
 
 <script>
